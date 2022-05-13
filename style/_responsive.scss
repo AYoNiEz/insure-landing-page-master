@@ -1,0 +1,322 @@
+@media screen and (min-width: 1000px) {
+    .container{
+        .header{
+            .navbar-menu{
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1.5rem 10rem;
+                .menu-box-respon{
+                    
+                    display: flex;
+                    .menu-wrapper{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .sub-menu{
+                            padding: 0rem 1rem;
+                            text-transform: uppercase;
+                            font-weight: 700;
+                            color: $DarkGrayishViolet;
+                            cursor: pointer;
+                            font-size: 14px;
+                            letter-spacing: 0.1rem;
+                        }
+                        .sub-menu-last{
+                            text-align: center;
+                            font-size: 14px;
+                            color: black;
+                            text-transform: uppercase;
+                            font-family: 'Karla', sans-serif;
+                            font-weight: 700;
+                            border: 1px solid rgb(0, 0, 0);
+                            padding: 0.7rem 1.5rem;
+                            margin: 0rem 1rem;
+                            cursor: pointer;
+                            letter-spacing: 0.1rem;
+                        }
+                        .sub-menu-last:hover{
+                            background-color: black;
+                            color: white;
+                        }
+                    }
+
+                }
+                .hamburger{
+                    display: none;
+                }
+                .close{
+                    display: none;
+                }
+                .show{
+                    display: block;
+                }
+                .hide{
+                    display: none;
+                }
+            }
+            .menu-box{
+                display: none;
+                top: 100px;
+                width: 100vw;
+                height: 100vh;
+                position: absolute;
+                background-color: #2b282f;
+                background-image: url(/images/bg-pattern-mobile-nav.svg);
+                background-repeat: no-repeat;
+                background-position: bottom center;
+                animation-name: slide;
+                    animation-duration: 1s;  
+                    animation-fill-mode: forwards;
+                .menu-header{
+                    padding: 2rem;
+                    background-color: #ffffff;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .menu-wrapper{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 2rem;
+                    
+                    
+                    .sub-menu{
+                        font-size: 24px;
+                        color: white;
+                        text-transform: uppercase;
+                        font-family: 'Karla', sans-serif;
+                        font-weight: 700;
+                        margin: 1rem;
+                    }
+                    .sub-menu-last{
+                        text-align: center;
+                        width: 90%;
+                        font-size: 24px;
+                        color: white;
+                        text-transform: uppercase;
+                        font-family: 'Karla', sans-serif;
+                        font-weight: 700;
+                        border: 1px solid white;
+                        margin: 1rem;
+                        padding: 1rem;
+                    }
+                    .sub-menu-last:hover{
+                        background-color: black;
+                        color: white;
+                        border: 1px solid black;
+                    }
+                }
+                
+            }
+            .show{
+                display: block;
+            }
+            @keyframes slide {
+                from {top: -400px;}
+                to {top: 90px;}
+            }    
+            
+            
+        }
+        .banner{
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            align-items: flex-start;
+            text-align: left;
+            width: 100%;
+            background-image: url(/images/bg-pattern-intro-left-desktop.svg),url(/images/bg-pattern-intro-right-desktop.svg);
+            background-repeat: no-repeat;
+            background-position: left bottom -350px,right top -80px;
+            z-index: 999;
+            
+            .banner-moblie{
+                display: none;
+            }
+            .banner-desktop{
+                display: block;
+                position: absolute;
+                top: 100px;
+                right: 150px;
+                z-index: -999;
+                img{
+                    width: 100%;
+                }
+            }
+            .text-banner{
+                padding: 6rem 1rem 6rem 10rem;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: left;
+                align-items: baseline;
+                width: 50%;
+                background-image: none;
+                hr{
+                    display: block;
+                    width: 150px;
+                    border-radius: 3rem;
+                    margin-bottom: 4rem;
+                }
+                h1{
+                    font-size: 70px;
+                    line-height: 4rem;
+                }
+                p{
+                    padding: 2rem 0rem ;
+                }
+                .viewplan{
+                    text-align: center;
+                    margin-top: 0rem;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+        .body{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            padding: 18rem 11rem 4rem 11rem;
+            align-items: baseline;
+            background-image: url(/images/bg-pattern-intro-left-desktop.svg);
+            background-repeat: no-repeat;
+            background-position: left top -155px;
+            hr{
+                margin: 0;
+                margin-bottom: 2rem;
+                width: 150px;
+                border: 0.5px solid $DarkViolet;
+                opacity: 0.8;
+            }
+            h1{
+                font-family: 'DM Serif Display', serif;
+                font-size: 68px;
+                margin-bottom: 3rem;
+                color: hsl(270, 9%, 17%);
+            }
+            .box-wrapper{
+                display: flex;
+                .box{
+                    margin: 1rem 0rem;
+                    margin-right: 1rem;
+                    text-align: left;
+
+                    .box-title{
+                        margin-top: 2rem;
+                        font-family: 'DM Serif Display', serif;
+                        font-size: 26px;
+                    }
+                    .box-paragraph{
+                        color: hsl(273, 4%, 51%);
+                        padding: 1rem 0rem;
+                        line-height: 1.5rem;
+                    }
+        
+                }
+            }
+            .howwework{
+                width: 100%;
+                margin: 8rem 0rem 6rem 0rem;
+                padding: 5rem 5rem;
+                background-color: #2b273f;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background-image: url(/images/bg-pattern-how-we-work-desktop.svg);
+                background-repeat: no-repeat;
+                background-position: top  right ;
+                text-align: left;
+                h1{
+                    color: white;
+                    line-height: 3rem;
+                    font-size: 50px;
+                    margin-bottom: 0rem;
+
+                    span{
+                        display: block;
+                    }
+                }
+                .howwework-btn{
+                    text-align: center;
+                    color: white;
+                    border: 1px solid white;
+                    width: 150px;
+                    padding: 0.7rem 0.8rem;
+                    text-transform: uppercase;
+                }
+                .howwework-btn:hover{
+                    background-color: white;
+                    color: $DarkViolet;
+                }
+            }
+
+            
+        }
+        .footer{
+            padding: 4rem 10rem;
+            text-align: center;
+            background-color: $VeryLightGray;
+            background-image: url(/images/bg-pattern-footer-desktop.svg);
+            background-repeat: no-repeat;
+            .footer-logo{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 2rem;
+                .social{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 0rem;
+                    margin-bottom: 0rem;
+                    svg{
+                        margin: 0rem 0.5rem;
+                    }
+                    .icon:hover{
+                        fill: black;
+                    }
+                }
+            }
+            hr{
+                border: 0.5px solid rgb(206, 206, 206);
+            }
+            .footer-menu{
+                width: 80%;
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                text-align: left;
+                .footer-box{
+                    h2{
+                        text-align: left;
+                        margin: 2rem 0rem;
+                        text-transform: uppercase;
+                        color: hsl(273, 4%, 51%);
+                        font-size: 14px;
+                        letter-spacing: 0.1rem;
+                    }
+                    li{
+                        font-size: 13px;
+                        text-transform: uppercase;
+                        color: $DarkViolet;
+                        font-weight: 700;
+                        list-style:none;
+                        padding:0.4rem 0rem;
+                        letter-spacing: 0.1rem;
+                        cursor: pointer;
+                    }
+                    li:hover{
+                        text-decoration: underline;
+                    }
+                    
+                }
+            }
+        }
+
+    }   
+}

@@ -1,0 +1,269 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Karla', sans-serif;
+}
+main{
+    width: 100vw;
+}
+.container{
+    .header{
+        .navbar-menu{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            .menu-box-respon{
+                display: none;
+            }
+            .hamburger{
+                display: block;
+            }
+            .close{
+                display: none;
+            }
+            .show{
+                display: block;
+            }
+            .hide{
+                display: none;
+            }
+        }
+        .menu-box{
+            display: none;
+            top: 100px;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            background-color: #2b282f;
+            background-image: url(/images/bg-pattern-mobile-nav.svg);
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            animation-name: slide;
+                animation-duration: 1s;  
+                animation-fill-mode: forwards;
+            .menu-header{
+                padding: 2rem;
+                background-color: #ffffff;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .menu-wrapper{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 2rem;
+                
+                   
+                .sub-menu{
+                    font-size: 24px;
+                    color: white;
+                    text-transform: uppercase;
+                    font-family: 'Karla', sans-serif;
+                    font-weight: 700;
+                    margin: 1rem;
+                }
+                .sub-menu-last{
+                    text-align: center;
+                    width: 90%;
+                    font-size: 24px;
+                    color: white;
+                    text-transform: uppercase;
+                    font-family: 'Karla', sans-serif;
+                    font-weight: 700;
+                    border: 1px solid white;
+                    margin: 1rem;
+                    padding: 1rem;
+                }
+                .sub-menu-last:hover{
+                    background-color: black;
+                    color: white;
+                    border: 1px solid black;
+                }
+            }
+            
+        }
+        .show{
+            display: block;
+        }
+        @keyframes slide {
+            from {top: -400px;}
+            to {top: 90px;}
+        }    
+        
+        
+    }
+    .banner{
+        background-color: $DarkViolet;
+        hr{
+            display: none;
+        }
+        img{
+            width: 100%;
+            
+        }
+        .banner-moblie{
+            display: block;
+        }
+        .banner-desktop{
+            display: none;
+        }
+        .text-banner{
+            color: white;
+            margin-top: -5px;
+            text-align: center;
+            padding: 6rem 1rem;
+            background-image: url(/images/bg-pattern-intro-left-mobile.svg),url(/images/bg-pattern-intro-right-mobile.svg);
+            background-repeat: no-repeat;
+            background-position: left top, right bottom -180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1{
+                font-family: 'DM Serif Display', serif;
+                font-size: 44px;
+                line-height: 3rem;
+                span{
+                    display: block;
+                }
+                
+            }
+            p{
+                padding: 1rem 0.7rem;
+                line-height: 1.5rem;
+            }
+            .viewplan{
+                width: 150px;
+                border: 1px solid white;
+                
+                padding: 0.5rem;
+                text-transform: uppercase;
+                font-size: 14px;
+                letter-spacing: 0.1rem;
+            }
+            .viewplan:hover{
+                background-color: white;
+                color: $DarkViolet;
+            }
+        }
+    }
+    .body{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding-top:7rem;
+        align-items: center;
+        background-image: url(/images/bg-pattern-intro-right-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: right top -150px;
+        hr{
+            margin: 2rem;
+            width: 35%;
+            border: 0.5px solid $DarkViolet;
+            opacity: 0.8;
+        }
+        h1{
+            font-family: 'DM Serif Display', serif;
+            font-size: 44px;
+            margin-bottom: 3rem;
+            color: hsl(270, 9%, 17%);
+        }
+        .box{
+            margin: 1rem 0rem;
+            .box-title{
+                margin-top: 2rem;
+                font-family: 'DM Serif Display', serif;
+                font-size: 26px;
+            }
+            .box-paragraph{
+                color: hsl(273, 4%, 51%);
+                padding: 1rem 1.6rem;
+                line-height: 1.5rem;
+            }
+
+        }
+        .howwework{
+            margin:6rem 1.5rem;
+            padding: 4rem 1.4rem;
+            background-color: #2b273f;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(/images/bg-pattern-how-we-work-mobile.svg);
+            background-repeat: no-repeat;
+            background-position: top  right ;
+            h1{
+                color: white;
+                line-height: 2.5rem;
+                font-size: 36px;
+                margin-bottom: 2rem;
+            }
+            .howwework-btn{
+                color: white;
+                border: 1px solid white;
+                width: 150px;
+                padding: 0.7rem 0.8rem;
+                text-transform: uppercase;
+            }
+            .howwework-btn:hover{
+                background-color: white;
+                color: $DarkViolet;
+            }
+        }
+    }
+    .footer{
+        padding: 5.5rem 1.5rem;
+        text-align: center;
+        background-color: $VeryLightGray;
+        background-image: url(/images/bg-pattern-footer-mobile.svg);
+        background-repeat: no-repeat;
+        .footer-logo{
+            .social{
+                margin-top: 2rem;
+                margin-bottom: 2.5rem;
+                svg{
+                    margin: 0rem 0.3rem;
+                }
+                .icon:hover{
+                    fill: black;
+                }
+            }
+        }
+        hr{
+            border: 0.5px solid rgb(206, 206, 206);
+        }
+        .footer-menu{
+            .footer-box{
+                h2{
+                    margin: 2rem;
+                    text-transform: uppercase;
+                    color: hsl(273, 4%, 51%);
+                    font-size: 14px;
+                    letter-spacing: 0.1rem;
+                }
+                li{
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    color: $DarkViolet;
+                    font-weight: 700;
+                    list-style:none;
+                    padding: 0.5rem;
+                    letter-spacing: 0.1rem;
+                    cursor: pointer;
+                }
+                li:hover{
+                    text-decoration: underline;
+                }
+                
+            }
+        }
+    }
+}
